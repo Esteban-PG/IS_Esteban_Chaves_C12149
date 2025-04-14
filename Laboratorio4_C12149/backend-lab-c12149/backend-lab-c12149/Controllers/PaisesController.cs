@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using backend_lab_c12149.Handlers;
+using backend_lab_c12149.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace backend_lab_c12149.Controllers
@@ -7,10 +9,19 @@ namespace backend_lab_c12149.Controllers
     [ApiController]
     public class PaisesController : ControllerBase
     {
-        [HttpGet]
-        public string Get()
+        private readonly PaisesHandler _paisesHandler;
+
+        public PaisesController()
         {
-            return "Hola Mundo";
+            _paisesHandler = new PaisesHandler();
+        }
+
+
+
+        [HttpGet]
+        public List<PaisesModel> Get() { 
+            var paises = _paisesHandler.ObtenerPaises();
+            return paises;
         }
     }
 }
