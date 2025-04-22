@@ -35,13 +35,14 @@ is-fullwidth"
 </template>
 
 <script>
+    import axios from "axios";
     export default {
         data() {
             return {
                 paises: [
-                    { nombre: "Costa Rica", continente: "América", Idioma:"Español" },
+                    { nombre: "Costa Rica", continente: "América", Idioma: "Español" },
                     { nombre: "Japón", continente: "Asia", Idioma: "Japonés" },
-                    { nombre: "Corea del Sur", continente: "Asia", Idioma:"Coreano" },
+                    { nombre: "Corea del Sur", continente: "Asia", Idioma: "Coreano" },
                     { nombre: "Italia", continente: "Europa", Idioma: "Italiano" },
                     { nombre: "Alemania", continente: "Europa", Idioma: "Alemán" },
                 ],
@@ -49,11 +50,21 @@ is-fullwidth"
         },
         methods: {
             eliminarPais(index) {
-            this.paises.splice(index, 1);
-        }
+                this.paises.splice(index, 1);
+            },
+            obtenerTareas() {
+                axios.get("https://localhost:7019/api/Paises").then(
+                    (response) => {
+                        this.paises = response.data;
+                    });
+            },
 
-        }
-    }
+            created: function () {
+                this.obtenerTareas();
+            },
+
+        },
+    };
 </script>
 
 <style lang="scss" scoped>
