@@ -53,17 +53,17 @@ is-fullwidth"
                 this.paises.splice(index, 1);
             },
             obtenerTareas() {
-                axios.get("https://localhost:7019/api/Paises").then(
+                axios.get("https://localhost:7067/api/Paises").then(
                     (response) => {
                         this.paises = response.data;
                     });
             },
 
-            created: function () {
-                this.obtenerTareas();
-            },
-
         },
+        created: function () {
+            this.obtenerTareas();
+        },
+
     };
 </script>
 
