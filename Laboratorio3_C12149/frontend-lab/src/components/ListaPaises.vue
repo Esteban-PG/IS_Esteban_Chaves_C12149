@@ -1,7 +1,16 @@
 <template>
     <div class="container mt-5">
         <h1 class="display-4 text-center">Lista de paises</h1>
+        <div class = "row justify-content-end">
+            <div class="col-2">
+                <a href="/pais">
+                    <button type=" button" class=" btn btn-outline-secondary float-right">
+                        Agregar pais
+                    </button>
+                </a>
 
+            </div>
+        </div> 
     </div>
 
     <div class="container mt-5">
