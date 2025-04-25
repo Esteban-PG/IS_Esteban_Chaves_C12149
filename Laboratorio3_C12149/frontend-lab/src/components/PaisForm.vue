@@ -54,6 +54,7 @@
 
 
 <script>
+    import axios from "axios";
     export default {
         data() {
             return {
@@ -65,11 +66,24 @@
             };
         },
 
-        methods: {
-            guardarPais() {
-                console.log("Datos a guardar: ", this.datosFormulario);
+            methods: {
+                guardarPais() {
+                    console.log("Datos a guardar: ", this.datosFormulario);
+                    axios.post("https://localhost:7067/api/Paises", {
+                        nombre: this.datosFormulario.nombre,
+                        continente: this.datosFormulario.continente,
+                        idioma: this.datosFormulario.idioma,
+                    }).then(function (response)
+                    {
+                        console.log(response); 
+                        window.location.href = "/";
+                    })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                
+                }
             }
-        }
     };
 </script>
 
