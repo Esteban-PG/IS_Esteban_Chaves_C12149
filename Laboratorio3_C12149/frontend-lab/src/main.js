@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import ListaPaises from './components/ListaPaises.vue';
 
-createApp(App).mount('#app')
+const router = createRouter({
+    history: createWebHistory(),
+    routes: [{ path: '/', name: 'home', component: ListaPaises }],
+});
+
+createApp(App).use(router).mount("#app");
