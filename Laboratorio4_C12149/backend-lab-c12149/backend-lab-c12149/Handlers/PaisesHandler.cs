@@ -56,5 +56,22 @@ namespace backend_lab_c12149.Handlers
 
             return paises;
         }
+
+        public bool CrearPais(PaisesModel pais)
+        {
+            var consulta = @"INSERT INTO [dbo].[Pais] ([Nombre], [Idioma], [Continente])
+                             VALUES (@Nombre, @Idioma, @Continente)";
+            var comandoParaConsulta = new SqlCommand(consulta, _conexion);
+
+            comandoParaConsulta.Parameters.AddWithValue("@Nombre", pais.Nombre);
+            comandoParaConsulta.Parameters.AddWithValue("@Idioma", pais.Idioma);
+            comandoParaConsulta.Parameters.AddWithValue("@Continente", pais.Continente);
+
+            _conexion.Open();
+            bool exito = comandoParaConsulta.ExecuteNonQuery() >= 1;
+            _conexion.Close();
+
+            return exito;
+        }
     }
 }
