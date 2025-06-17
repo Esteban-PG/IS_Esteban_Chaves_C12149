@@ -31,7 +31,7 @@ is-fullwidth"
     <tr v-for="(paises, index) of paises" :key="index">
         <td>{{ paises.nombre }}</td>
         <td>{{ paises.continente }}</td>
-        <td>{{ paises.Idioma }}</td>
+        <td>{{ paises.idioma }}</td>
         <td>
             <button class="btn btn-secondary btn-sm">Editar</button>
             <button class="btn btn-danger btn-sm" @click="eliminarPais(index)">Eliminar</button>

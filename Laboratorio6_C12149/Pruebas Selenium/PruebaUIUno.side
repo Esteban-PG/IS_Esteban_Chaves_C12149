@@ -1,0 +1,121 @@
+{
+  "id": "769530cd-f6cf-4871-bb27-001ae57fd30d",
+  "version": "2.0",
+  "name": "PruebaUIUno",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "2fcf93f4-180c-42eb-a819-8f475a76ea73",
+    "name": "PruebaUIUno",
+    "commands": [{
+      "id": "37f4a91d-d97a-4930-a5eb-9de641464191",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dec2ca8-981f-47b2-a962-4687630c0995",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1103x816",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1522d5f2-499f-43d6-a632-56bedb14dabb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Costa Rica')]", "xpath:innerText"]
+      ],
+      "value": "Costa Rica"
+    }, {
+      "id": "df5c3b3f-c217-48f7-ac23-2e07b084c25b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(8) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(8) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/table/tbody/tr[8]/td", "xpath:idRelative"],
+        ["xpath=//tr[8]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Nicaragua')]", "xpath:innerText"]
+      ],
+      "value": "Nicaragua"
+    }, {
+      "id": "6d969150-6df8-412b-97cf-c7bebd23d8e0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"]
+      ],
+      "value": "América"
+    }, {
+      "id": "b2ef8c45-bd87-443a-b6da-fb2dd5178b81",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.btn-outline-secondary",
+      "targets": [
+        ["css=.btn-outline-secondary", "css:finder"],
+        ["xpath=//button[@type=' button']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar pais')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3b19274-9cb7-4b61-a153-0d5c2a534665",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(1) .btn-secondary",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-secondary", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/table/tbody/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Editar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e39c56a1-d7ed-415b-ae44-23f00d9a7536",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=tr:nth-child(1) .btn-danger",
+      "targets": [
+        ["css=tr:nth-child(1) .btn-danger", "css:finder"],
+        ["xpath=//div[@id='app']/div[2]/table/tbody/tr/td[4]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a653cca6-c1eb-4af2-808a-7d068b6aaa72",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "frontend-lab",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea1238ad-3cb2-4a6f-aeb9-56ecca2322e7",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "frontend-lab",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f124b168-27cd-45e3-b66e-cdeb43b2e7b6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2fcf93f4-180c-42eb-a819-8f475a76ea73"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
