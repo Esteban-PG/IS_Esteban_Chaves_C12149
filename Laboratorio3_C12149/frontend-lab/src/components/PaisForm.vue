@@ -1,10 +1,10 @@
 <template>
     <div>
-        <h1>Formulario para crear un país</h1>
+        <h1>Formulario para crear un paï¿½s</h1>
 
         <div class="d-flex justify-content-center align-items-center vh-100">
             <div class="card p-4 shadow" style="max-width: 400px; width: 100%;">
-                <h3 class="text-center">Formulario de creación de países</h3>
+                <h3 class="text-center">Formulario de creaciï¿½n de paï¿½ses</h3>
 
                 <form @submit.prevent="guardarPais">
                     <div class="form-group">
@@ -23,12 +23,12 @@
                                 class="form-control"
                                 required>
                             <option value="" disabled>Seleccione un continente</option>
-                            <option>África</option>
+                            <option>ï¿½frica</option>
                             <option>Asia</option>
                             <option>Europa</option>
-                            <option>América</option>
-                            <option>Oceanía</option>
-                            <option>Antártida</option>
+                            <option>Amï¿½rica</option>
+                            <option>Oceanï¿½a</option>
+                            <option>Antï¿½rtida</option>
                         </select>
                     </div>
 

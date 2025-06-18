@@ -71,7 +71,11 @@ namespace backend_lab_c12149.Handlers
             bool exito = comandoParaConsulta.ExecuteNonQuery() >= 1;
             _conexion.Close();
 
+            
+
             return exito;
         }
+
+
     }
 }
